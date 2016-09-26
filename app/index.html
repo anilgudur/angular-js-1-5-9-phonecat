@@ -7,15 +7,19 @@
 	<link rel="stylesheet" href="app.css" />
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="app.js"></script>
+	<script src="phone-list.component.js"></script>
     </head>
-    <body ng-controller="PhoneListController">
+<!--    <body ng-controller="PhoneListController">-->
+    <body>
 
-	<ul>
+<!--	<ul>
 	    <li ng-repeat="phone in phones">
 		<span>{{phone.name}}</span>
 		<p>{{phone.snippet}}</p>
 	    </li>
-	</ul>
+	</ul>-->
+	<!-- Use a custom component to render a list of phones -->
+	<phone-list></phone-list>
 
 	<p>Total number of phones: {{phones.length}}</p>
 	<p>Hello, {{name}}!</p>
@@ -23,6 +27,7 @@
 	    <tr><th colspan="8">Row number</th></tr>
 	    <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">{{i + 1}}</td></tr>
 	</table>
+	<phone-list></phone-list>
 
     </body>
 </html>
